@@ -5,3 +5,11 @@
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
+
+<h1 [style.color]="mycolor" (click)="changeColor('green')">{{ title }}</h1>
+
+<br />
+<br />
+<ul>
+    <li *ngFor="let item of ordersPermition">{{ item }}</li>
+</ul>

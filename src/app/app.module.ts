@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OrdersPermition, ORDERS_PERMITIONS } from './test.constants';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: OrdersPermition, useValue: ORDERS_PERMITIONS}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { ORDERS_PERMITIONS, OrdersPermition } from './test.constants'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tourOfHeroes';
+  mycolor = 'red';
+
+  constructor(
+    @Inject(OrdersPermition) private ordersPermition: any
+  ) {
+
+  }
+
+  changeColor(color) {
+    this.mycolor = color; 
+  }
 }
